@@ -1,10 +1,8 @@
 import cv2
 import mediapipe as mp
 import time
-import os
 
-folderpath=r"# path of the folder contaning the images of fingers"
-myList=os.listdir(folderpath)
+myList=[img1.jpg,img2.jpg,img3.jpg,img4.jpg,img5.jpg,img6.jpg]
 overlapimages=[]
 
 mpHands=mp.solutions.hands
