@@ -7,7 +7,7 @@ import numpy as np
 mpHands=mp.solutions.hands
 hand=mpHands.Hands(min_detection_confidence=0.7,min_tracking_confidence=0.7)
 mpDraw=mp.solutions.drawing_utils
-folderpath=r"Download the images and provide the pathof the images the images are provided in the directory"
+folderpath=r"Download the brush images folder and past the path of the folder"
 pathlist=os.listdir(folderpath)
 imgcanvas=np.zeros((720,1280,3),np.uint8)
 overlayimages=[]
