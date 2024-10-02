@@ -1,8 +1,10 @@
 import cv2
 import mediapipe as mp
 import time
+import os
 
-myList=[img1.jpg,img2.jpg,img3.jpg,img4.jpg,img5.jpg,img6.jpg]  # Add the path of the images the images are provided in the directory.
+folderpath=r"Download the finger images folder and past the path of the folder"
+myList=os.listdir(folderpath)
 overlapimages=[]
 
 mpHands=mp.solutions.hands
