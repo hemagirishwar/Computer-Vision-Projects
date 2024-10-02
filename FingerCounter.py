@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import time
 
-myList=[img1.jpg,img2.jpg,img3.jpg,img4.jpg,img5.jpg,img6.jpg]
+myList=[img1.jpg,img2.jpg,img3.jpg,img4.jpg,img5.jpg,img6.jpg]  # Add the path of the images the iamges are provided in the directory
 overlapimages=[]
 
 mpHands=mp.solutions.hands
