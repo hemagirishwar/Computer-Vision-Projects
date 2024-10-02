@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import time
 
-cap=cv2.VideoCapture(r"C:\Users\hemag\OneDrive\Desktop\cv module videos\WhatsApp Video 2024-07-14 at 14.17.21_36a75a4d.mp4")
+cap=cv2.VideoCapture(0)
 mpPose=mp.solutions.pose
 pose=mpPose.Pose()
 mpDraw=mp.solutions.drawing_utils
