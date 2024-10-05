@@ -12,12 +12,11 @@ img = cv2.imread(r"Paste the path of any image")
 img = cv2.resize(img, (400, 400))
 
 parts = [
-    img[:100, :100], img[:100, 100:200], img[:100, 200:300], img[:100, 300:],
-    img[100:200, :100], img[100:200, 100:200], img[100:200, 200:300], img[100:200, 300:],
-    img[200:300, :100], img[200:300, 100:200], img[200:300, 200:300], img[200:300, 300:],
-    img[300:, :100], img[300:, 100:200], img[300:, 200:300], img[300:, 300:]
+    img[:100, 200:300],img[:100, 100:200],img[:100, :100],img[:100, 300:],
+    img[100:200, :100],img[100:200, 200:300],img[100:200, 100:200],img[300:, 200:300],
+    img[200:300, 100:200],img[200:300, :100],img[200:300, 200:300],img[200:300, 300:],
+    img[300:, :100],img[300:, 300:],img[300:, 100:200],img[100:200, 300:]
 ]
-
 def stack_image(parts):
     return np.vstack([
         np.hstack(parts[:4]),
@@ -38,6 +37,7 @@ while True:
     ret, f = cap.read()
     f = cv2.flip(f, 1)
     rgb = cv2.cvtColor(f, cv2.COLOR_BGR2RGB)
+    f[0:400,880:]=img
     result = hands.process(rgb)
 
     if result.multi_hand_landmarks:
